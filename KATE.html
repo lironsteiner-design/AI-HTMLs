@@ -96,28 +96,48 @@
       font-size: clamp(0.92rem, 1.35vw, 1.04rem);
     }
 
-    .formula {
-      padding: 13px 0 0;
+    .refine-hero {
+      padding-top: 13px;
       border-top: 4px solid var(--yellow);
     }
 
-    .formula-label {
-      color: var(--muted);
-      font-size: 0.68rem;
-      font-weight: 850;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .refine-hero h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
     }
 
-    .formula p {
-      margin: 8px 0 0;
+    .refine-tips {
+      display: grid;
+      gap: 11px;
+    }
+
+    .refine-tip h3 {
+      margin: 0 0 4px;
       color: var(--charcoal);
-      font-size: 1.02rem;
-      font-weight: 800;
-      line-height: 1.3;
+      font-size: 0.78rem;
+      letter-spacing: 0.01em;
     }
 
-    .formula strong { color: #9b7900; }
+    .refine-tip ul {
+      display: grid;
+      gap: 3px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .refine-tip li {
+      color: var(--muted);
+      font-size: 0.7rem;
+      line-height: 1.35;
+    }
+
+    .refine-tip li::before {
+      margin-right: 6px;
+      color: #9b7900;
+      content: "•";
+      font-weight: 900;
+    }
 
     .section-heading {
       display: flex;
@@ -160,7 +180,7 @@
     .category h3 {
       margin: 0;
       color: var(--charcoal);
-      font-size: 1.02rem;
+      font-size: 1.12rem;
       line-height: 1.18;
       letter-spacing: -0.025em;
     }
@@ -169,7 +189,7 @@
       min-height: 36px;
       margin: 5px 0 10px;
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.86rem;
     }
 
     .prompts {
@@ -187,8 +207,8 @@
       border-left: 3px solid var(--yellow);
       color: #303638;
       background: var(--soft-gray);
-      font-size: 0.77rem;
-      line-height: 1.4;
+      font-size: 0.84rem;
+      line-height: 1.45;
     }
 
     .category:nth-child(2n) .prompt { border-left-color: var(--charcoal); }
@@ -218,48 +238,6 @@
     .copy:hover,
     .copy:focus-visible { color: var(--charcoal); outline: 2px solid var(--yellow); outline-offset: 3px; }
 
-    .refine {
-      display: grid;
-      grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
-      gap: 28px;
-      align-items: center;
-      margin-top: 28px;
-      padding-top: 15px;
-      border-top: 3px solid var(--yellow);
-    }
-
-    .refine h3 {
-      margin: 0;
-      color: var(--charcoal);
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .refine p {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: 0.77rem;
-    }
-
-    .scope-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px 9px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .scope-list li {
-      padding: 5px 9px;
-      border: 1px solid #d6d7d1;
-      border-radius: 999px;
-      color: #4c5558;
-      background: #fff;
-      font-size: 0.69rem;
-      font-weight: 720;
-    }
-
     footer {
       display: flex;
       justify-content: space-between;
@@ -272,7 +250,7 @@
     @media (max-width: 800px) {
       main { padding-top: 26px; }
       .hero { grid-template-columns: 1fr; gap: 24px; }
-      .formula { max-width: 460px; }
+      .refine-hero { max-width: 460px; }
       .categories { column-gap: 26px; }
     }
 
@@ -280,10 +258,7 @@
       main { width: min(100% - 28px, 520px); padding-top: 22px; }
       .topline-note { display: none; }
       .topline { margin-bottom: 23px; }
-      .categories, .refine { grid-template-columns: 1fr; }
-      .refine { gap: 13px; }
-      .section-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
-      .section-heading p { text-align: left; }
+      .categories { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 4px; }
     }
 
@@ -297,19 +272,15 @@
       .hero { gap: 28px; margin-bottom: 20px; }
       h1 { font-size: 30px; }
       .dek { font-size: 0.84rem; }
-      .formula { padding-top: 9px; }
-      .formula p { font-size: 0.82rem; }
-      .section-heading { margin-bottom: 9px; padding-bottom: 6px; }
+      .refine-hero { padding-top: 9px; }
+      .refine-hero h2 { margin-bottom: 7px; }
+      .refine-tip li { font-size: 0.61rem; }
       .categories { column-gap: 28px; row-gap: 14px; }
       .category { padding-top: 8px; }
       .category-intro { min-height: 26px; margin: 3px 0 6px; font-size: 0.68rem; }
       .prompts { gap: 5px; }
       .prompt { padding: 6px 40px 6px 8px; font-size: 0.64rem; }
       .copy { display: none; }
-      .refine { gap: 18px; margin-top: 16px; padding-top: 9px; }
-      .refine p { font-size: 0.66rem; }
-      .scope-list { gap: 4px 6px; }
-      .scope-list li { padding: 3px 6px; font-size: 0.58rem; }
       footer { margin-top: 10px; font-size: 0.58rem; }
     }
   </style>
@@ -326,21 +297,33 @@
 
     <section class="hero" aria-labelledby="page-title">
       <div>
-        <h1 id="page-title">Find precedent across past temporary works projects with KATE.</h1>
+        <h1 id="page-title">Search past temporary works with KATE.</h1>
         <p class="dek">Use KATE to find relevant examples, people, risks, and lessons from past temporary works projects.</p>
       </div>
-      <aside class="formula" aria-label="Prompt formula">
-        <div class="formula-label">A useful starting point</div>
-        <p><strong>Action</strong> + topic + scope + <strong>desired output</strong></p>
+      <aside class="refine-hero" aria-labelledby="refine-title">
+        <h2 id="refine-title">Tips for refining or speeding up the search</h2>
+        <div class="refine-tips">
+          <div class="refine-tip">
+            <h3>Limit the search</h3>
+            <ul>
+              <li>“Within the past [X] years”</li>
+              <li>“In [state / region]”</li>
+              <li>“Only search through a handful of relevant tasks”</li>
+            </ul>
+          </div>
+          <div class="refine-tip">
+            <h3>Make it more specific</h3>
+            <ul>
+              <li>“Search in [X] files within the QC folder”</li>
+              <li>“Give [X] examples”</li>
+              <li>Specify the task category, table, or file type.</li>
+            </ul>
+          </div>
+        </div>
       </aside>
     </section>
 
-    <section aria-labelledby="categories-title">
-      <div class="section-heading">
-        <h2 id="categories-title">Prompt categories</h2>
-        <p>Choose the question you need to answer, then make it specific.</p>
-      </div>
-
+    <section aria-label="Prompt categories">
       <div class="categories">
         <article class="category">
           <h3>Find similar tasks + specific info</h3>
@@ -378,23 +361,6 @@
           </ul>
         </article>
       </div>
-    </section>
-
-    <section class="refine" aria-labelledby="refine-title">
-      <div>
-        <h3 id="refine-title">Refine or speed up the search</h3>
-        <p>Add one or two details when the first search is too broad.</p>
-      </div>
-      <ul class="scope-list" aria-label="Prompt supplement examples">
-        <li>Task category / table</li>
-        <li>Folder or file type</li>
-        <li>Search in [X] files</li>
-        <li>Within the past [X] years</li>
-        <li>In [state / region]</li>
-        <li>Give [X] examples</li>
-        <li>Only relevant tasks</li>
-        <li>Limit the search time</li>
-      </ul>
     </section>
 
     <footer>
