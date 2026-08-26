@@ -97,13 +97,19 @@
     }
 
     .refine-hero {
-      padding-top: 13px;
-      border-top: 4px solid var(--yellow);
+      padding: 18px 20px 17px;
+      border: 1px solid #eadb7a;
+      border-top: 5px solid var(--yellow);
+      border-radius: 16px;
+      background: var(--yellow-soft);
+      box-shadow: 0 8px 20px rgba(145, 119, 0, 0.07);
     }
 
     .refine-hero h2 {
       margin: 0 0 12px;
-      font-size: 1rem;
+      color: var(--charcoal);
+      font-size: 1.12rem;
+      line-height: 1.2;
     }
 
     .refine-tips {
@@ -114,7 +120,7 @@
     .refine-tip h3 {
       margin: 0 0 4px;
       color: var(--charcoal);
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       letter-spacing: 0.01em;
     }
 
@@ -128,7 +134,7 @@
 
     .refine-tip li {
       color: var(--muted);
-      font-size: 0.7rem;
+      font-size: 0.78rem;
       line-height: 1.35;
     }
 
@@ -309,13 +315,13 @@
               <li>“Within the past [X] years”</li>
               <li>“In [state / region]”</li>
               <li>“Only search through a handful of relevant tasks”</li>
+              <li>“Limit the search so it doesn’t take too long”</li>
             </ul>
           </div>
           <div class="refine-tip">
             <h3>Make it more specific</h3>
             <ul>
               <li>“Search in [X] files within the QC folder”</li>
-              <li>“Give [X] examples”</li>
               <li>Specify the task category, table, or file type.</li>
             </ul>
           </div>
@@ -326,16 +332,16 @@
     <section aria-label="Prompt categories">
       <div class="categories">
         <article class="category">
-          <h3>Find similar tasks + specific info</h3>
+          <h3>Similar tasks and specific info</h3>
           <p class="category-intro">Start with precedent when you need an example, package, or kickoff view.</p>
           <ul class="prompts">
-            <li><blockquote class="prompt">“Show me timber falsework calc packages from the past few years and list the designer, EOR, and state.”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
-            <li><blockquote class="prompt">“Using the five most similar past projects, prepare a design kickoff brief for a new temporary working surface. Include likely load cases, coordination questions, and risks to consider.”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
+            <li><blockquote class="prompt">“show me timber falsework category 511 calc packages from the past few years”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
+            <li><blockquote class="prompt">“Using the five most similar past projects, prepare a design kickoff brief for a new temporary working surface. Highlight commonalities and risks to consider”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
           </ul>
         </article>
 
         <article class="category">
-          <h3>Find experts</h3>
+          <h3>Look for experts</h3>
           <p class="category-intro">Locate people with relevant project, design, or EOR experience.</p>
           <ul class="prompts">
             <li><blockquote class="prompt">“Who has worked on high-risk bridge demos as the EOR or designer?”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
@@ -347,16 +353,16 @@
           <h3>Test assumptions</h3>
           <p class="category-intro">Pressure-test a design assumption against past practice.</p>
           <ul class="prompts">
-            <li><blockquote class="prompt">“I’m assuming a uniform load for <em>[topic]</em>. Is there an example of this being done in a trestle design?”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
+            <li><blockquote class="prompt">“I am assuming a unform load for this load case, is there an example of this being done a past trestle design?”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
             <li><blockquote class="prompt">“Compare this assumption with similar past projects and flag where the precedent supports or differs.”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
           </ul>
         </article>
 
         <article class="category">
-          <h3>Understand risks + concerns</h3>
+          <h3>Understand risks and concerns</h3>
           <p class="category-intro">Surface recurring concerns and learn where designs changed during delivery.</p>
           <ul class="prompts">
-            <li><blockquote class="prompt">“For falsework systems, what are the key risks generally identified in QRSD forms within the QC folder?”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
+            <li><blockquote class="prompt">“For falsework systems, what are the key risks generally identified in the QRSD form within the QC folder.”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
             <li><blockquote class="prompt">“Find projects where the temporary works design changed between the calculation package, shop drawings, and field installation. Summarize the changes and why they occurred.”<button class="copy" type="button" aria-label="Copy example prompt">Copy</button></blockquote></li>
           </ul>
         </article>
